@@ -2,7 +2,7 @@
 This guide will walk you through setting up and running the Automated Meeting Schedules Bot for your squadron.
 It covers prerequisites, configuration, and usage.
 
-> ⚠️ **WARINING:** This script has only been tested to be working on Windows with Microsoft Word installed.
+> ⚠️ **NOTE:** This script has only been tested and confimed to be working on Windows with Microsoft Word installed.
 
 ## 1. Prerequisites
 ### Software
@@ -10,14 +10,16 @@ It covers prerequisites, configuration, and usage.
 - pip (Python package manager)
 - Optional: Microsoft Word or [LibreOffice](https://www.libreoffice.org/) insalled on your system for PDF export
 ### Python Packages
-Install these packages using pip:
+Once Python is installed, install these packages using pip by running this in a command prompt or terminal window:
 
 `pip install pandas numpy python-docx docx2pdf tqdm openpyxl requests Office365-REST-Python-Client python-dateutil`
 
 ### Files
 - A spreadsheet fommated correctly that contains your master three month schedule.
+  - See master_spreadsheet.xlsx.
   - You'll need to make a shareable link if you want to enable online mode. See Setup for more information.
 - A meeting template formatted correctly.
+  - See Meeting Schedule Template.docx.
   - You'll need to make a shareable link if you want to enable online mode. See Setup for more information.
 - The script python file (obviously).
 - The preferences file (`automated_meeting_schedules_preferences.json`) formatted correctly in the same directory that the script is in.
@@ -38,7 +40,7 @@ Running in online mode is prefered. This enables the script to re-download the m
 
 ## 3. Setup
 Open the preferences file (named automated_meeting_schedules_preferences.json). Enter the required information:
-- base_meetings_folder: Enter the folder path of where the meeting folders will be stored. 
+- base_meetings_folder: Enter the folder path of where the meeting folders will be stored.
 > ⚠️ **Warining:** Due to JSON limitations, if the folder path contains backslashes, either repalce them with foward slashes (`/`) or two back slashes (`\\`). For example, if the file path is `C:\Users\user\Meetings`, it needs to be changed to either `C:/Users/user/Meetings` or `C:\\Users\\user\\Meetings`.
 - run_in_offline_mode: Choose if you want to run in online mode (`false`) or offline mode (`true`) (see below).
 - add_drill_test_signup_text_to_abu_uniform_meetings: Choose if you want to add drill test sign up text to the meeting schedules of ABU meetings.
@@ -55,7 +57,10 @@ Open the preferences file (named automated_meeting_schedules_preferences.json). 
 
 ## 4. First Run & Usage
 Open a terminal or command prompt in the folder where the script is.
-Run the script: `python3 "Automated Meeting schedules.py"`
+Run the script: 
+
+`python3 "Automated Meeting schedules.py"`
+
 
 Follow the prompts: 
 - If set to online mode, the script will download the master spreadsheet and template from the links you gave it. If a file containing `Meeting Schedule` in its name exists in the directory, you'll be prompted if you want to use it. If not, the script will download it from the provided link.
@@ -124,3 +129,8 @@ The preferences file needs to be named automated_meeting_schedules_preferences.j
 **PDF Export Fails:** Ensure either Microsoft Word (paid) or [LibreOffice](https://www.libreoffice.org/) (free) is installed and not running when exporting to PDF. If using LibreOffice, ensure `soffice` is addedf in the system `PATH`.
 
 **Note:** LibreOffice hasn't been tested but should work.
+
+
+
+## Contact
+capmeetingschedules@lordofthesheps.com
