@@ -1,10 +1,15 @@
 # Automated Meeting Schedules Bot — Setup Guide
 This guide will walk you through setting up and running the Automated Meeting Schedules Bot for your squadron.
-It covers prerequisites, configuration, and usage.
+It covers prerequisites, configuration, and usage.1
 
 > ⚠️ **NOTE:** This script has only been tested and confimed to be working on Windows with Microsoft Word installed.
 
 ## 1. Prerequisites
+### Download
+1. Click the green `Code` button above, and click `Download ZIP`. The script and required files will be download to your computer.
+2. Extract the zip file to the location you want to run the script in.
+
+
 ### Software
 - Python 3.8+ (recommend latest 3.x version)
 - pip (Python package manager)
