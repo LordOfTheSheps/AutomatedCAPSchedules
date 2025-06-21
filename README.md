@@ -1,6 +1,6 @@
 # Automated Meeting Schedules Bot — Setup Guide
 This guide will walk you through setting up and running the Automated Meeting Schedules Bot for your squadron.
-It covers prerequisites, configuration, and usage.1
+It covers prerequisites, configuration, and usage.
 
 > ⚠️ **NOTE:** This script has only been tested and confimed to be working on Windows with Microsoft Word installed.
 
@@ -11,8 +11,8 @@ It covers prerequisites, configuration, and usage.1
 
 
 ### Software
-- Python 3.8+ (recommend latest 3.x version)
-- pip (Python package manager)
+- [Python 3.8+](https://www.python.org/downloads/) (recommend latest 3.x version)
+- pip (Python package manager, usually installed with Python)
 - Optional: Microsoft Word or [LibreOffice](https://www.libreoffice.org/) insalled on your system for PDF export
 ### Python Packages
 Once Python is installed, install these packages using pip by running this in a command prompt or terminal window:
