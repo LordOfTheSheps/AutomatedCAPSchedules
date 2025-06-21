@@ -71,11 +71,14 @@ def download_with_progress(url, filename, desc="Downloading"):
 
 
 # --- Prompt for NCSA if configured ---
-if config.get("include_NCSA_prompt") and random.randint(1, 1) == 1: # 1% chance to show NCSA prompt
-    response = input("What is the better NCSA, NBB or Hawk? ").strip()
-    if (response.strip().upper() != "NBB") and ("blue beret" not in response.lower()):
-        print("Wrong answer. Exiting.")
-        exit()
+try:
+    if config.get("include_NCSA_prompt") and random.randint(1, 1) == 1: # 1% chance to show NCSA prompt
+        response = input("What is the better NCSA, NBB or Hawk? ").strip()
+        if (response.strip().upper() != "NBB") and ("blue beret" not in response.lower()):
+            print("Wrong answer. Exiting.")
+            exit()
+except KeyError:
+    ...
 
 # --- Download master spreadsheet from SharePoint ---
 master_spreadsheet_path = os.path.join(script_dir, "master_spreadsheet.xlsx")
