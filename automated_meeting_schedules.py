@@ -70,9 +70,9 @@ def download_with_progress(url, filename, desc="Downloading"):
     return response
 
 
-# --- Prompt for NCSA if configured ---
+# --- Prompt for the best NCSA if configured ---
 try:
-    if config.get("include_NCSA_prompt") and random.randint(1, 1) == 1: # 1% chance to show NCSA prompt
+    if config.get("include_NCSA_prompt") and random.randint(1, 100) == 1: # 1% chance to show NCSA prompt
         response = input("What is the better NCSA, NBB or Hawk? ").strip()
         if (response.strip().upper() != "NBB") and ("blue beret" not in response.lower()):
             print("Wrong answer. Exiting.")
@@ -151,7 +151,7 @@ doc = Document(os.path.join(script_dir, meeting_schedule_filename))
 
 # Check if the sheet "Current" exists before reading (using pandas)
 with pd.ExcelFile(master_spreadsheet_path) as xls:
-    # Find a sheet name that matches 'current' (case-insensitive, allow for 'curent' typo)
+    # Find a sheet name that matches 'current' (case-insensitive)
     sheet_name = None
     for s in xls.sheet_names:
         if s.strip().lower() in ["current"]:
@@ -545,5 +545,6 @@ def try_export_pdf(docx_path, save_path, pdf_file_name):
 
 # Export as PDF (try docx2pdf, then LibreOffice, else skip)
 
-pdf_file_name = f"{save_file_date} Meeting Schedule.pdf"
-try_export_pdf(docx_full_path, save_path, pdf_file_name)
+if config.get("export_as_pdf"):
+    pdf_file_name = f"{save_file_date} Meeting Schedule.pdf"
+    try_export_pdf(docx_full_path, save_path, pdf_file_name)

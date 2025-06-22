@@ -1,8 +1,17 @@
+> ⚠️ **THIS PROJECT IS CURRENTLY IN EARLY DEVELOPMENT.** Bugs and unexpected issues should be expected. Please report them by creating a new issue [here](https://github.com/LordOfTheSheps/AutomatedCAPSchedules/issues).
+
+
+
+<br>
+<br>
+
+### This is a simple Python script that automates the process of making weekly Civil Air Patrol meeting schedules by reading a 3 month schedule spreadsheet you provide it. 
+
 # Automated Meeting Schedules Bot — Setup Guide
 This guide will walk you through setting up and running the Automated Meeting Schedules Bot for your squadron.
 It covers prerequisites, configuration, and usage.
 
-> ⚠️ **NOTE:** This script has only been tested and confimed to be working on Windows with Microsoft Word installed.
+> ℹ️ **NOTE:** This script has only been tested and confimed to be working on Windows with Microsoft Word installed.
 
 ## 1. Prerequisites
 ### Download
@@ -50,6 +59,7 @@ Open the preferences file (named automated_meeting_schedules_preferences.json). 
 - run_in_offline_mode: Choose if you want to run in online mode (`false`) or offline mode (`true`) (see below).
 - add_drill_test_signup_text_to_abu_uniform_meetings: Choose if you want to add drill test sign up text to the meeting schedules of ABU meetings.
 - drill_test_sign_up_phrase: The phrase you want to add to ABU meeting schedules if "add_drill_test_signup_text_to_abu_uniform_meetings" is set to `true`,
+- export_as_pdf: Set to `true` if you want to enable automatic PDF conversion and export, otherwise `false`.
 #### The follwing prefences also need to be filled if you're running in online mode:
 - master_spreadsheet_url: Enter the direct download link for the master 3 Month Schedule spreadsheet. 
     
@@ -101,6 +111,7 @@ The preferences file needs to be named automated_meeting_schedules_preferences.j
     "run_in_offline_mode": false,
     "add_drill_test_signup_text_to_abu_uniform_meetings": true,
     "drill_test_sign_up_phrase": "Drill test sign-up will be offered prior to the start of the meeting.",
+    "export_as_pdf": true,
     "master_spreadsheet_url": "https://flwing.sharepoint.com/:x:/s/CurryCadetSquadron/EbSllsw0221msioec12ONM2s-AA7Zg?download=1",
     "meeting_schedule_template_url": "https://flwing.sharepoint.com/:w:/s/CurryCadetSquadron/EaGfsioec12ONM-2sAZ9Za?download=1"
 } 
@@ -115,6 +126,7 @@ The preferences file needs to be named automated_meeting_schedules_preferences.j
     "base_meetings_folder": "C:/Users/user/OneDrive - FLORIDA WING HEADQUARTERS/Curry Cadet Squadron Drive/Meeting Folders", 
     "run_in_offline_mode": true,
     "add_drill_test_signup_text_to_abu_uniform_meetings": false,
+    "export_as_pdf": false,
     "drill_test_sign_up_phrase": "",
     "master_spreadsheet_url": "",
     "meeting_schedule_template_url": ""

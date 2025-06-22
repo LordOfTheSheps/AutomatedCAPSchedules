@@ -3,6 +3,7 @@
     "run_in_offline_mode": true,
     "add_drill_test_signup_text_to_abu_uniform_meetings": false,
     "drill_test_sign_up_phrase": "Drill test sign-up will be offered prior to the start of the meeting.",
+    "export_as_pdf": true,
     "master_spreadsheet_url": "https://flwing.sharepoint.com/:x:/s/xxxxxxxx/xxxxxxxxxxxxxxxx?download=1",
     "meeting_schedule_template_url": "https://flwing.sharepoint.com/:w:/s/xxxxxxxx/xxxxxxxxxxxxxxxx?download=1",
     "include_NCSA_prompt": false
